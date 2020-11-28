@@ -554,7 +554,6 @@
             this.MaximizeBox = false;
             this.Name = "Home";
             this.Text = "Class Management System";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGrafo)).EndInit();
