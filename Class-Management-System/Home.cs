@@ -17,16 +17,7 @@ namespace Class_Management_System
     {
         private readonly IGrafoService grafoService;
         private readonly IAulaService aulaService;
-        private readonly IDataBaseService dataBaseService;
 
-        private Configuracoes configuracoes = new Configuracoes();
-        private Sobre sobre;
-        private BuscaUsuario buscarUsuario;
-        private FormUsuario cadastroUsuario;
-        private Login login;
-        private FormEditarUsuario editarUsuario;
-        private BuscarPerfil buscarPerfil;
-        private FormEditarPerfil formperfil;
         private FormMateriasSemAula formMateriasSemAula;
 
         private HashSet<string> periodos;
@@ -48,121 +39,23 @@ namespace Class_Management_System
             InitializeComponent();
             this.grafoService = DependencyFactory.Resolve<IGrafoService>();
             this.aulaService = DependencyFactory.Resolve<IAulaService>();
-            this.dataBaseService = DependencyFactory.Resolve<IDataBaseService>();
 
             try
             {
-                Configuracoes.CarregarInfosArquivo();
-                //this.IniciarConexaoBanco();
-            }
-            catch
-            {
-                DialogResult resultado = MessageBox.Show("Falha na leitura do arquivo de configuração. " +
-                    "Deseja abrir as configurações agora ?", "Config file", MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-                if (resultado == DialogResult.Yes)
-                {
-                    this.configuracoes.ShowDialog();
-                }
-                else return;
-            }
-
-            try
-            {
-                this.login = new Login();
-                this.sobre = new Sobre();
-                this.buscarUsuario = new BuscaUsuario();
-                this.cadastroUsuario = new FormUsuario(0);
-                this.editarUsuario = new FormEditarUsuario();
-                this.buscarPerfil = new BuscarPerfil();
-                this.formperfil = new FormEditarPerfil();
-
-                this.login.FormClosed += Login_FormClosed;
-                this.editarUsuario.FormClosed += EditarUsuario_FormClosed;
                 this.periodos = new HashSet<string>();
                 this.materias = new HashSet<string>();
                 this.professores = new HashSet<string>();
                 this.dias = new HashSet<string>();
                 this.horarios = new HashSet<string>();
-
-                this.AcoesLogout();
             }
             catch
             {
-                DialogResult resultado = MessageBox.Show("Houve um problema na abertura do sistema. conecte ao banco e abra o aplicativo novamente", "Config file",
+                DialogResult resultado = MessageBox.Show("Houve um problema na abertura do sistema.", "Config file",
                     MessageBoxButtons.OK, MessageBoxIcon.Question);
                 this.Close();
             }
-
-            this.btnCadastrar.Visible = false;
-            this.btnBuscarUsuario.Visible = false;
-            this.btnPerfil.Visible = false;
         }
 
-        private void EditarUsuario_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (Session.usuario_removido != null)
-            {
-                this.lblusuario_logado.Visible = false;
-                this.AcoesLogout();
-                Session.usuario_removido = null;
-            }
-        }
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if (Session.usuario != null)
-            {
-                this.lblusuario_logado.Visible = true;
-                this.lblusuario_logado.Text = "Bem vindo, " + Session.usuario.SNome;
-                this.AcoesLogin();
-            }
-        }
-
-        private void AcoesLogout()
-        {
-            this.btnLogin.Text = "Login";
-            this.btnCadastrar.Enabled = false;
-            this.btnBuscarUsuario.Enabled = false;
-            this.btnPerfil.Enabled = false;
-            this.btnBuscarPerfil.Enabled = false;
-            this.btnCadastrarPerfil.Enabled = false;
-        }
-
-        private void AcoesLogin()
-        {
-            this.btnLogin.Text = "Logout";
-            this.btnCadastrar.Enabled = true;
-            this.btnBuscarUsuario.Enabled = true;
-            this.btnPerfil.Enabled = true;
-            this.btnBuscarPerfil.Enabled = true;
-            this.btnCadastrarPerfil.Enabled = true;
-        }
-
-        private void Home_Shown(object sender, EventArgs e)
-        {
-            Configuracoes.CarregarInfosArquivo();
-            //this.IniciarConexaoBanco();
-        }
-
-        public void IniciarConexaoBanco()
-        {
-            try
-            {
-                this.dataBaseService.Open();
-            }
-            catch
-            {
-                DialogResult result = MessageBox.Show("Não foi possível conectar com o banco de dados. " +
-                     "Deseja abrir a tela de configurações ?", "Banco de dados", MessageBoxButtons.YesNo,
-                     MessageBoxIcon.Exclamation);
-
-                if (result == DialogResult.Yes)
-                {
-                    this.configuracoes.ShowDialog();
-                }
-            }
-        }
         /// <summary>
         /// Limpa todos os componentes da tela relacionados ao grafo
         /// </summary>
@@ -182,12 +75,6 @@ namespace Class_Management_System
             this.cmbPeriodo.Items.Clear();
             this.cmbProfessor.Items.Clear();
             this.dataGridGrafo.Rows.Clear();
-        }
-
-        private void AbrirBuscarUsuario()
-        {
-            if (this.buscarUsuario == null) this.buscarUsuario = new BuscaUsuario();
-            this.buscarUsuario.ShowDialog();
         }
 
         /// <summary>
@@ -301,40 +188,6 @@ namespace Class_Management_System
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (this.btnLogin.Text.Equals("Logout"))
-            {
-                Session.usuario = null;
-                this.lblusuario_logado.Visible = false;
-                this.AcoesLogout();
-            }
-            else
-            {
-                this.login.ShowDialog();
-            }
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            this.cadastroUsuario.ShowDialog();
-        }
-
-        private void btnSobre_Click(object sender, EventArgs e)
-        {
-            this.sobre.ShowDialog();
-        }
-
-        private void btnBuscarUsuario_Click(object sender, EventArgs e)
-        {
-            this.buscarUsuario.ShowDialog();
-        }
-
-        private void btnConfiguracoes_Click(object sender, EventArgs e)
-        {
-            this.configuracoes.ShowDialog();
-        }
-
         /// <summary>
         /// Torna todas as linhas do DataGrid visíveis e desmarca todos os ComboBox
         /// </summary>
@@ -431,12 +284,6 @@ namespace Class_Management_System
             this.HabilitarLinhasDataGrid();
         }
 
-        private void btnPerfil_Click(object sender, EventArgs e)
-        {
-            this.editarUsuario.DefinirUsuario(Session.usuario);
-            this.editarUsuario.ShowDialog();
-        }
-
         private void DisplayTimer_Tick(object sender, EventArgs e)
         {
             if (this.expanded == false)
@@ -451,14 +298,6 @@ namespace Class_Management_System
                 {
                     reps++;
                     this.expanded = false;
-
-                    this.btnOpcoesPerfil.BringToFront();
-
-                    this.btnOpcoesPerfil.Location = new Point(this.btnOpcoesPerfil.Location.X, this.btnOpcoesPerfil.Location.Y + EXPAND_SIZE);
-                    this.btnCadastrarPerfil.Location = new Point(this.btnCadastrarPerfil.Location.X, this.btnCadastrarPerfil.Location.Y + EXPAND_SIZE);
-                    this.btnBuscarPerfil.Location = new Point(this.btnBuscarPerfil.Location.X, this.btnBuscarPerfil.Location.Y + EXPAND_SIZE);
-                    this.btnConfiguracoes.Location = new Point(this.btnConfiguracoes.Location.X, this.btnConfiguracoes.Location.Y + EXPAND_SIZE);
-                    this.btnSobre.Location = new Point(this.btnSobre.Location.X, this.btnSobre.Location.Y + EXPAND_SIZE);
                 }
             }
             else
@@ -472,39 +311,8 @@ namespace Class_Management_System
                 else
                 {
                     reps++;
-                    this.btnOpcoesPerfil.Location = new Point(this.btnOpcoesPerfil.Location.X, this.btnOpcoesPerfil.Location.Y - EXPAND_SIZE);
-                    this.btnCadastrarPerfil.Location = new Point(this.btnCadastrarPerfil.Location.X, this.btnCadastrarPerfil.Location.Y - EXPAND_SIZE);
-                    this.btnBuscarPerfil.Location = new Point(this.btnBuscarPerfil.Location.X, this.btnBuscarPerfil.Location.Y - EXPAND_SIZE);
-                    this.btnConfiguracoes.Location = new Point(this.btnConfiguracoes.Location.X, this.btnConfiguracoes.Location.Y - EXPAND_SIZE);
-                    this.btnSobre.Location = new Point(this.btnSobre.Location.X, this.btnSobre.Location.Y - EXPAND_SIZE);
                 }
             }
-        }
-
-        private void btnUsuario_Click(object sender, EventArgs e)
-        {
-            if (this.buscarUsuario.Visible == false)
-            {
-                this.btnCadastrar.Visible = true;
-                this.btnBuscarUsuario.Visible = true;
-                this.btnPerfil.Visible = true;
-            }
-            this.DisplayTimer.Enabled = true;
-        }
-
-        private void btnOpcoesPerfil_Click(object sender, EventArgs e)
-        {
-            this.DisplayPerfil.Enabled = true;
-        }
-
-        private void btnCadastrarPerfil_Click(object sender, EventArgs e)
-        {
-            this.formperfil.ShowDialog();
-        }
-
-        private void btnBuscarPerfil_Click(object sender, EventArgs e)
-        {
-            this.buscarPerfil.ShowDialog();
         }
 
         private void DisplayPerfil_Tick(object sender, EventArgs e)
@@ -521,12 +329,6 @@ namespace Class_Management_System
                 {
                     this.reps_perfil++;
                     this.expanded_perfil = false;
-
-                    this.btnConfiguracoes.BringToFront();
-                    this.btnSobre.BringToFront();
-
-                    this.btnConfiguracoes.Location = new Point(this.btnConfiguracoes.Location.X, this.btnConfiguracoes.Location.Y + EXPAND_SIZE_PERFIL);
-                    this.btnSobre.Location = new Point(this.btnSobre.Location.X, this.btnSobre.Location.Y + EXPAND_SIZE_PERFIL);
                 }
             }
             else
@@ -540,8 +342,6 @@ namespace Class_Management_System
                 else
                 {
                     this.reps_perfil++;
-                    this.btnConfiguracoes.Location = new Point(this.btnConfiguracoes.Location.X, this.btnConfiguracoes.Location.Y - EXPAND_SIZE_PERFIL);
-                    this.btnSobre.Location = new Point(this.btnSobre.Location.X, this.btnSobre.Location.Y - EXPAND_SIZE_PERFIL);
                 }
             }
         }

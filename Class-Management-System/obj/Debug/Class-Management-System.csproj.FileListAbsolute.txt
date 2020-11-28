@@ -86,3 +86,17 @@ C:\Users\ARTHUR\Downloads\cms-app-master\cms-app-master\Class-Management-System\
 C:\Users\ARTHUR\Downloads\cms-app-master\cms-app-master\Class-Management-System\obj\Debug\Class-Management-System.csproj.CopyComplete
 C:\Users\ARTHUR\Downloads\cms-app-master\cms-app-master\Class-Management-System\obj\Debug\Class-Management-System.exe
 C:\Users\ARTHUR\Downloads\cms-app-master\cms-app-master\Class-Management-System\obj\Debug\Class-Management-System.pdb
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\bin\Debug\Utils\Aulas.txt
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.exe.config
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.exe
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.pdb
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\bin\Debug\MySql.Data.dll
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csprojAssemblyReference.cache
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Forms.FormMateriasSemAula.resources
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Home.resources
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Properties.Resources.resources
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.GenerateResource.cache
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.CoreCompileInputs.cache
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.CopyComplete
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.exe
+C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.pdb

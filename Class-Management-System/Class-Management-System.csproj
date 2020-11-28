@@ -69,77 +69,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\DataBaseConection.cs" />
     <Compile Include="Entities\DiaSemana.cs" />
     <Compile Include="Entities\Disciplina.cs" />
     <Compile Include="Entities\Aula.cs" />
-    <Compile Include="Entities\PerfilUsuario.cs" />
-    <Compile Include="Entities\Pessoa.cs" />
     <Compile Include="Entities\Professor.cs" />
-    <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Enums\Cor.cs" />
     <Compile Include="Enums\DiaLetivo.cs" />
     <Compile Include="Enums\Horario.cs" />
     <Compile Include="Enums\Periodo.cs" />
-    <Compile Include="Forms\BuscarPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\BuscarPerfil.Designer.cs">
-      <DependentUpon>BuscarPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\BuscaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\BuscaUsuario.Designer.cs">
-      <DependentUpon>BuscaUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormEditarPerfil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormEditarPerfil.Designer.cs">
-      <DependentUpon>FormEditarPerfil.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormEditarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormEditarUsuario.Designer.cs">
-      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FormMateriasSemAula.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormMateriasSemAula.Designer.cs">
       <DependentUpon>FormMateriasSemAula.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\formSQL.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\formSQL.Designer.cs">
-      <DependentUpon>formSQL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FormUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FormUsuario.Designer.cs">
-      <DependentUpon>FormUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Configuracoes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Configuracoes.Designer.cs">
-      <DependentUpon>Configuracoes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Sobre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sobre.Designer.cs">
-      <DependentUpon>Sobre.cs</DependentUpon>
     </Compile>
     <Compile Include="Global\Session.cs" />
     <Compile Include="Home.cs">
@@ -149,53 +91,21 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="ServicesImpl\AulaServiceImpl.cs" />
-    <Compile Include="ServicesImpl\ProcedureServiceImpl.cs" />
-    <Compile Include="Services\IDataBaseService.cs" />
     <Compile Include="Interfaces\IDado.cs" />
     <Compile Include="Interfaces\IGrafo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServicesImpl\DataBaseServiceImpl.cs" />
     <Compile Include="ServicesImpl\GrafoServiceImpl.cs" />
     <Compile Include="Services\IAulaService.cs" />
     <Compile Include="Services\IGrafoService.cs" />
-    <Compile Include="Services\IProcedureService.cs" />
     <Compile Include="Structures\Aresta.cs" />
     <Compile Include="Structures\Grafo.cs" />
     <Compile Include="Structures\Vertice.cs" />
     <Compile Include="Utils\DependencyFactory.cs" />
-    <Compile Include="Utils\EntidadesDatabase.cs" />
     <Compile Include="Utils\LeitorArquivo.cs" />
     <Compile Include="Utils\ValidadorCpf.cs" />
-    <EmbeddedResource Include="Forms\BuscarPerfil.resx">
-      <DependentUpon>BuscarPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BuscaUsuario.resx">
-      <DependentUpon>BuscaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormEditarPerfil.resx">
-      <DependentUpon>FormEditarPerfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormEditarUsuario.resx">
-      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMateriasSemAula.resx">
       <DependentUpon>FormMateriasSemAula.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\formSQL.resx">
-      <DependentUpon>formSQL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormUsuario.resx">
-      <DependentUpon>FormUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Configuracoes.resx">
-      <DependentUpon>Configuracoes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sobre.resx">
-      <DependentUpon>Sobre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -242,23 +152,6 @@
     <Content Include="Forms\Imagens\config-ico.ico" />
     <Content Include="Forms\Imagens\main-ico.ico" />
     <Content Include="Forms\Imagens\sobre-ico.ico" />
-    <Content Include="SQL\DropSPs.sql" />
-    <Content Include="SQL\script_completo.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SQL\SCRIPT_CRIA_REGISTRO_PADRAO.sql" />
-    <Content Include="SQL\SCRIPT_CRIA_TABELAS.sql" />
-    <Content Include="SQL\SPCARREGA_PERFIL.sql" />
-    <Content Include="SQL\SPCONSULTA_USUARIO.sql" />
-    <Content Include="SQL\SPCRIA_ACESSO.sql" />
-    <Content Include="SQL\SPCRIA_PESSOA.sql" />
-    <Content Include="SQL\SPDELETA_PERFIL.sql" />
-    <Content Include="SQL\SPDELETA_USUARIO.sql" />
-    <Content Include="SQL\SPDROPA_TABLES.sql" />
-    <Content Include="SQL\SPGRAVA_DADOS_USUARIO.sql" />
-    <Content Include="SQL\SPINSERI_USUARIO.sql" />
-    <Content Include="SQL\SPVERIFICACPF.sql" />
-    <Content Include="SQL\SPVERIFICA_LOGIN.sql" />
     <Content Include="Utils\Aulas.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
