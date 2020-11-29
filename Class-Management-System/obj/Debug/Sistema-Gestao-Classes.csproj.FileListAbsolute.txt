@@ -1,0 +1,13 @@
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Utils\Aulas.txt
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Sistema_Gestao_Classes.exe.config
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Sistema_Gestao_Classes.exe
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Sistema_Gestao_Classes.pdb
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\MySql.Data.dll
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Forms.FormMateriasSemAula.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Home.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema_Gestao_Classes.Properties.Resources.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema-Gestao-Classes.csproj.GenerateResource.cache
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema-Gestao-Classes.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema-Gestao-Classes.csproj.CopyComplete
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema_Gestao_Classes.exe
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Sistema_Gestao_Classes.pdb
