@@ -350,5 +350,15 @@ namespace Class_Management_System
         {
             this.formMateriasSemAula.ShowDialog();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblProfessores_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

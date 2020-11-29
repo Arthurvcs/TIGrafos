@@ -100,3 +100,17 @@ C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Clas
 C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.CopyComplete
 C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.exe
 C:\Users\ARTHUR\Documents\GitHub\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.pdb
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Utils\Aulas.txt
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.exe.config
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.exe
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\Class-Management-System.pdb
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\bin\Debug\MySql.Data.dll
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csprojAssemblyReference.cache
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Forms.FormMateriasSemAula.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Home.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class_Management_System.Properties.Resources.resources
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.GenerateResource.cache
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.csproj.CopyComplete
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.exe
+C:\Users\Fernando\Source\Repos\Arthurvcs\TIGrafos\Class-Management-System\obj\Debug\Class-Management-System.pdb
