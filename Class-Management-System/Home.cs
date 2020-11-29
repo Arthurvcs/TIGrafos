@@ -1,13 +1,11 @@
 ﻿using Class_Management_System.Entities;
 using Class_Management_System.Forms;
-using Class_Management_System.Global;
 using Class_Management_System.Interfaces;
 using Class_Management_System.Services;
 using Class_Management_System.Structures;
 using Class_Management_System.Utils;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
