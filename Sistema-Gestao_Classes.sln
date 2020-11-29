@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Class-Management-System", "Class-Management-System\Class-Management-System.csproj", "{9DED5D83-9BD5-4A22-BAD8-D0E0D72F8363}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema-Gestao-Classes", "Class-Management-System\Sistema-Gestao-Classes.csproj", "{9DED5D83-9BD5-4A22-BAD8-D0E0D72F8363}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

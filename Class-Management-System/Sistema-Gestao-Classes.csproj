@@ -7,8 +7,8 @@
     <ProjectGuid>{9DED5D83-9BD5-4A22-BAD8-D0E0D72F8363}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Class_Management_System</RootNamespace>
-    <AssemblyName>Class-Management-System</AssemblyName>
+    <RootNamespace>Sistema_Gestao_Classes</RootNamespace>
+    <AssemblyName>Sistema_Gestao_Classes</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -118,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
