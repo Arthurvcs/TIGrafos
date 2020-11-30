@@ -128,39 +128,6 @@ namespace Class_Management_System.Interfaces
         /// <returns></returns>
         Grafo GetComplementar();
 
-        /// <summary>
-        /// Esse método deve retornar, para um grafo conexo, a Árvore Geradora Mínima obtida por meio da aplicação
-        /// do algoritmo de Prim. É impresso uma linha de saída contendo a ordem em que o algoritmo de Prim inseriu
-        /// na AGM os vértices do grafo original, sendo que o vértice inicial corresponde ao vértice passado como
-        /// parâmetro. Além disso, se tivermos duas arestas como o mesmo peso, escolha aquela cuja soma dos índices
-        /// dos vértices seja menor. Se tivermos um novo empate, escolha aquela incidente ao vértice de menor índice.
-        /// </summary>
-        /// <param name="v1">Vértice</param>
-        /// <returns></returns>
-        IGrafo GetAGMPrim(Vertice inicial, out StringBuilder ordemInsercaoVertices);
-
-        /// <summary>
-        /// Esse método deve retornar, para um grafo conexo, sua Árvore Geradora Mínima obtida por meio da aplicação 
-        /// do algoritmo de Kruskal. Nesse método, deve também ser impressa uma linha de saída contendo a origem em que
-        /// o algoritmo de Kruskal inseriu na AGM os vértices do grafo original. Além disso, se tivermos duas arestas com o mesmo peso,
-        /// escolha aquela cuja soma dos índices dos vértices seja menor. Se tivermos um novo empate, escolha aquela
-        /// incidente ao vértice de menor índice.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <returns></returns>
-        IGrafo GetAGMKruskal(out StringBuilder ordemInsercaoVertices);
-
-        /// <summary>
-        /// Esse método deve retornar, para um grafo conexo, sua Árvore Geradora Mínima obtida por meio da aplicação 
-        /// do algoritmo de Kruskal. Nesse método, deve também ser impressa uma linha de saída contendo a origem em que
-        /// o algoritmo de Kruskal inseriu na AGM os vértices do grafo original, sendo que o vértice inicial 
-        /// correspondente ao vértice passado como parâmetro. Além disso, se tivermos duas arestas com o mesmo peso,
-        /// escolha aquela cuja soma dos índices dos vértices seja menor. Se tivermos um novo empate, escolha aquela
-        /// incidente ao vértice de menor índice.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <returns></returns>
-        IGrafo GetAGMKruskal(Vertice inicial, out StringBuilder ordemInsercaoVertices);
 
         /// <summary>
         /// 

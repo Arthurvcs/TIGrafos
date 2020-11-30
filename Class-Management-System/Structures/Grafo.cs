@@ -397,55 +397,12 @@ namespace Class_Management_System.Structures
             }
         }
 
-        public IGrafo GetAGMKruskal(out StringBuilder ordemInsercao)
-        {
-            Aresta arestaMenor = null;
-            Vertice v1, v2;
-            Grafo retorno = new Grafo();
-            List<Aresta> arestas = this.GetArestas();
-            ordemInsercao = new StringBuilder();
-
-            do
-            {
-                arestaMenor = this.GetMenorArestaDesempate(this.GetArestasMenorPeso(arestas));
-                if (arestaMenor != null)
-                {
-                    arestas.Remove(arestaMenor);
-                    v1 = arestaMenor.getVertice1;
-                    v2 = arestaMenor.getVertice2;
-
-                    if (!v1.GetVerticeChefe().Equals(v2.GetVerticeChefe()))
-                    {
-                        if (v1.FoiVisitado()) v2.SetVerticeChefe(v1.GetVerticeChefe());
-                        else v1.SetVerticeChefe(v2.GetVerticeChefe());
-
-                        v1.SetVisitado(true);
-                        v2.SetVisitado(true);
-
-                        retorno.AddAresta(arestaMenor);
-                        ordemInsercao.Append(arestaMenor.getValorVertice1 + "-" + arestaMenor.getValorVertice2 + " ");
-                    }
-                }
-            } while (arestaMenor != null);
-            this.ResetarVisitaVertices();
-            return retorno;
-        }
-
         /// <summary>
         /// Define a visita de todos os vértices do grafo como FALSE
         /// </summary>
         private void ResetarVisitaVertices()
         {
             this.vertices.ForEach(vertice => vertice.SetVisitado(false));
-        }
-
-        public IGrafo GetAGMKruskal(Vertice inicial, out StringBuilder ordemInsercaoVertices) // ~ pra que vértice inicial???
-        {
-            if (!inicial.Contem(GetMenorArestaDesempate(GetArestasMenorPeso(this.arestas))))
-            {
-                throw new Exception("Vértice passado por parâmetro não pode ser o vértice inicial da ordem de inserção pois não contém a menor aresta do grafo.");
-            }
-            return GetAGMKruskal(out ordemInsercaoVertices);
         }
 
         /// <summary>
@@ -528,57 +485,6 @@ namespace Class_Management_System.Structures
             }
 
             return arestaMenorIndice;
-        }
-
-        /// <summary>
-        /// Gera um grafo pelo método Prim iniciando pelo vértice passado 
-        /// por referência(caso ele exista no grafo)
-        /// </summary>
-        /// <returns></returns>
-        public IGrafo GetAGMPrim(Vertice v1, out StringBuilder ordemInsercaoVertices)
-        {
-            ordemInsercaoVertices = new StringBuilder();
-            Grafo AGM = new Grafo();
-            Grafo clone = this.Clonar();
-            Aresta proxima;
-
-            v1 = Vertice.Get(v1, clone.GetVertices());
-            AGM.AddVertice(v1);
-
-            while (AGM.Numero_vertices < clone.Numero_vertices)
-            {
-                proxima = this.GetMenorArestaDesempate(this.GetArestasMenorPeso(AGM.GetArestasNaoVisitadas()));
-
-                if (AGM.Contem(proxima.getVertice1) && AGM.Contem(proxima.getVertice2))
-                {
-                    AGM.RemoverAresta(proxima);
-                }
-                else if (AGM.Contem(proxima.getVertice1))
-                {
-                    AGM.AddVertice(proxima.getVertice2); //adiciona o vértice
-                    ordemInsercaoVertices.Append(proxima.getValorVertice1 + "-" + proxima.getValorVertice2 + " "); // adiciona os vertices a lista
-                    proxima.SetVisitado(true);
-                }
-                else
-                {
-                    AGM.AddVertice(proxima.getVertice1); //adiciona o vértice
-                    ordemInsercaoVertices.Append(proxima.getValorVertice2 + "-" + proxima.getValorVertice1 + " "); // adiciona os vertices a lista
-                    proxima.SetVisitado(true);
-                }
-            }
-
-            AGM.GetArestasNaoVisitadas().ForEach(aresta => AGM.RemoverAresta(aresta));
-            return AGM;
-        }
-
-        /// <summary>
-        /// Gera um grafo pelo método Prim iniciando pelo primeiro vértice
-        /// do grafo
-        /// </summary>
-        /// <returns></returns>
-        public IGrafo GetAGMPrim(out StringBuilder ordemInsercaoVertices)
-        {
-            return this.GetAGMPrim(this.vertices[0], out ordemInsercaoVertices);
         }
 
         /// <summary>
